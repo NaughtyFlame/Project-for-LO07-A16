@@ -1,0 +1,86 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-4-25, 10:15:09
+    Author     : andre
+*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+ /*background-image:url(images/creation_background.jpg);*/
+}
+
+.container {
+  max-width: 940px;
+      padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  color:#fff;
+}
+.header{
+  margin-bottom:50px;
+  text-align: center;
+}
+
+.header .top{
+    font-family: 'Kaushan Script', cursive;
+    color:#fff;
+    font-size: 60px;
+}
+.main{
+    text-align: left;
+}
+.header h1{
+    color:rgb(73, 160, 140);
+    
+}
+
+
+.header .container{
+  padding:20px 0;
+  /*border-bottom:1px solid #e5e5e5;*/
+  
+}
+
+.main .btn{
+  margin-top:30px;
+  color:#fff;
+  background-color:rgba(0,240,190,0.25);
+  border:0;
+  border-radius:0;
+  font-size:18px;
+}
+.btn:hover{
+    background-color: #307D7E ;
+}
+.btn{
+ padding: 6px 12px; 
+}
+
+.footer .container {
+    margin-top:60px;
+    padding: 20px 0;
+    border-top: 1px solid #e5e5e5;
+    text-align: right;
+  /*	text-align:center;*/
+}
+
+.footer ul li{
+ display:inline;
+ color:#fff;
+  padding: 0 20px;
+    margin-bottom: 80px;
+}
+
+.footer .back{
+    color:#fff;
+    
+}
