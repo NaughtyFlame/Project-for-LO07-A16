@@ -14,7 +14,7 @@ and open the template in the editor.
         require_once("../sql/link_to_myadmin.php");
         
         $username=$_POST['username'];
-        $password=$_POST['password'];
+        $password=md5($_POST['password']);
         $firstname=$_POST['firstname'];
         $lastname=$_POST['lastname'];
         $email=$_POST['email'];

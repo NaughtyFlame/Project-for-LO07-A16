@@ -13,16 +13,16 @@ and open the template in the editor.
         <link href="../css/LoginPage.css" rel="stylesheet" type="text/css"/>
     </head>
     <body style="background:url(../images/creation_background.jpg)no-repeat center center; background-size:cover;">
-        <form class="box login">
+        <form class="box login" method="post" action="login.php">
 	<div class="boxBody">
 	  <label>Username</label>
-	  <input type="text" tabindex="1" placeholder="Votre ID" required>
+	  <input name="username" type="text" tabindex="1" placeholder="Votre ID" required>
 	  <label>Password</label>
-	  <input type="password" tabindex="2" required>
+	  <input name="password" type="password" tabindex="2" required>
 	</div>
 	<footer class="box_down">
 	  <label><input type="checkbox" tabindex="3">Keep me logged in</label>
-	  <input type="submit" class="btn" value="Login" tabindex="4">
+	  <input name="submit" type="submit" class="btn" value="Login" tabindex="4">
           <a class="btn" href="creation.html">Sign Up</a>
           <button class="btn">Back to Home Page</button>
 	</footer>
