@@ -34,3 +34,12 @@ CREATE TABLE afficher
 	id_aff int NOT NULL,
 	CONSTRAINT pk_afficher PRIMARY KEY(id_p,id_aff)
 )
+
+CREATE TABLE utlisation
+(
+	username VARCHAR(64) NOT NULL PRIMARY KEY,
+    pass VARCHAR(64) NOT NULL,
+    email VARCHAR(64) NOT NULL,
+    firstname VARCHAR(64) NOT NULL,
+    lastname VARCHAR(64) NOT NULL
+)

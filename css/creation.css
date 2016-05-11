@@ -84,3 +84,11 @@ body{
     color:#fff;
     
 }
+.username-error,
+.first-name-error,
+.last-name-error,
+.email-error,
+.password-error {
+  color: #dd4b39;
+  font-weight: 600;
+}
