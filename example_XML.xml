@@ -1,0 +1,15 @@
+<!-- publication   -->
+<publication>
+	<num>000001</num>
+	<liste_auteurs>
+		<aucteur>Celso Satoshi Sakuraba</aucteur>
+		<aucteur>Andrea Cynthia Santos</aucteur>
+		<aucteur>Christian Prins</aucteur>
+	</liste_auteurs>
+	<titre>Work-troop scheduling for road network accessibility after a major earthquake</titre>
+	<in>Electronic Notes in Discrete Mathematics</in>
+	<annee>2016</annee>
+	<url>http://authors.elsevier.com/TrackPaper.html?trk_article=ENDM2111&trk_surname=Santos</url>
+	<indexe>DBLP</indexe>
+	<affiliation>LOSI</affiliation>
+</publication>
