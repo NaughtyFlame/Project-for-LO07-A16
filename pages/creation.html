@@ -25,32 +25,32 @@ and open the template in the editor.
       <div class="container">
         <div class="col-md-7">
           <h1>Join ICD</h1>
-          <form>
+          <form method="post" action="stocker_creation.php">
             <div class='form-group'>
                 <label for='username'>User Name</label>
                 <p class="username-error"></p>
-                <input type="text" class="form-control" id="username" placeholder="Votre"/>
+                <input name="username" type="text" class="form-control" id="username" placeholder="Votre"/>
             </div>
               
             <div class="form-group">
               <label for="first">First name</label>
               <p class="first-name-error"></p>
-              <input type="text" class="form-control" id="first" placeholder="First Name"/>
+              <input name="firstname" type="text" class="form-control" id="first" placeholder="First Name"/>
             </div>
             <div class="form-group">
               <label for="last">Last name</label>
               <p class="last-name-error"></p>
-              <input type="text" class="form-control" id="last" placeholder="Last Name"/>
+              <input name="lastname" type="text" class="form-control" id="last" placeholder="Last Name"/>
             </div>
              <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <p class="email-error"></p>
-            <input type="email" class="form-control" id="email" placeholder="Email">
+            <input name="email" type="email" class="form-control" id="email" placeholder="Email">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
             <p class="password-error"></p>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input name="password" type="password" class="form-control" id="password" placeholder="Password">
           </div>
           <button type="submit" class="btn">create account</button>
       </form>
