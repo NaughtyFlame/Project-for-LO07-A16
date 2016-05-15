@@ -7,6 +7,8 @@ and open the template in the editor.
     Created on : 2016-4-25, 14:11:57
     Author     : andre
 */
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -18,7 +20,7 @@ body{
 
 .box
 {
-   /* background:#fefefe;*/
+   
     background-color: rgba(48, 144, 199,0.5);
     margin:300px auto 30px;
 }
@@ -71,7 +73,7 @@ body{
 
 .btn {
   margin-top:5px;
- /* color:#848482;*/
+ 
   color:#fff;
   background-color:rgba(181,217,229,0.52);
   border:0;
@@ -93,4 +95,3 @@ body{
     text-align: center;
     color:#fff;
 }
-

@@ -29,6 +29,7 @@ and open the template in the editor.
                 $_SESSION['password']=$ligne[1];
                 $_SESSION['username']=$ligne[0];
                 echo ("bonjour");
+                header("location:search.php");
             }
             else{
                 exit("login fail please "

@@ -1,0 +1,39 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-5-15, 15:36:20
+    Author     : andre
+*/
+
+.page{
+    max-width: 970px;
+    margin:0 auto;
+    position: relative;
+    border:3px solid #34495E;
+    border-radius: 9px;
+    min-height: 900px;
+}
+
+#type-select{
+    height:30px;
+    width: 80px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.btn{
+    margin-top: 35px;
+    padding:5px 45px 5px 45px;
+}
+
+#typein{
+    margin-top: 15px;
+}
+
+
+#typein input{
+    width: 250px;
+}

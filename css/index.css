@@ -1,0 +1,68 @@
+
+
+/* header */
+.header{
+    background-color: #000 ;
+    height:75px;
+}
+
+
+
+
+
+/*main*/
+.main{
+    height:800px;
+}
+
+
+.btn-index {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 270px;
+  height: 55px;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 2px solid rgb(30,205,151);
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  font: normal 27px/53px "Advent Pro", Helvetica, sans-serif;
+  color: rgb(30, 205, 151);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  padding:10px 40px 10px 40px;
+  margin-left: 28px;
+  margin-right: 28px;
+
+}
+
+
+.threebtn{
+    padding-top: 600px;
+    position: auto;
+}
+
+
+.btn-index:hover {
+  color: rgba(255,255,255,1);
+  background: rgb(30, 205, 151);
+}
+
+.btn-index:active {
+  width: 250px;
+  border: 2px solid rgba(33,224,163,1);
+  font: normal 27px/53px "Advent Pro", Helvetica, sans-serif;
+  background: rgba(33,224,163,1);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
