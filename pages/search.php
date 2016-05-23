@@ -62,11 +62,59 @@ and open the template in the editor.
             </div> <!-- /row -->      
             
             <h4 class="pageheader">Peer-reviewed journal articles indexed in international databases</h4>
-            
-        
+            <p id="demo"></p>
+            <p id="test"></p>
+            <script>
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    affiche(xhttp);
+                }
+            };
+            xhttp.open("POST", "pubilication.xml", true);
+            xhttp.send();
+
+            function affiche(xml) {
+                var x, i, xmlDoc, div;
+                xmlDoc = xml.responseXML;
+                div = ""; 
+                x = xmlDoc.getElementsByTagName("pubilication");
+                for (i = 0 ; i <x.length; i++) {
+                    var y,j,auteurs;
+                    auteurs="";
+                    reference="";
+                    affiliation="";
+                    y=x[i].getElementsByTagName("auteur");
+                    for(j=0;j<y.length;j++){
+                        auteurs+=y[j].childNodes[0].nodeValue+",";
+                    }
+                    div+="<div class='valuesbox'>"+
+                            "<div class='row'><p>"+auteurs+"</p></div>"+
+                                    "<div class='row'>"+
+                            "<a href='#'>"+x[i].getElementsByTagName("titre")[0].childNodes[0].nodeValue+"</a></div>"+         
+                            "<div class='row'><p>"+x[i].getElementsByTagName("in")[0].childNodes[0].nodeValue+" "+
+                            "<span>"+x[i].getElementsByTagName("volume")[0].childNodes[0].nodeValue;
+                            
+                            if(x[i].getElementsByTagName("numero").length>0){
+                                div+="("+x[i].getElementsByTagName("numero")[0].childNodes[0].nodeValue+")";
+                            }
+                            div+="</span>,"+x[i].getElementsByTagName("page")[0].childNodes[0].nodeValue+"</p></div>"+
+                            "<div class='row'><p>";
+                            if(x[i].getElementsByTagName("editeur").length>0){
+                                div+=x[i].getElementsByTagName("editeur")[0].childNodes[0].nodeValue+",";
+                            }
+                            div+=x[i].getElementsByTagName("annee")[0].childNodes[0].nodeValue+".</p></div>"
+                            ;
+                            
+                            div+="</div>";
+                }
+                document.getElementById("demo").innerHTML = div;
+            }
+            </script>
+
         
         <?php
-        
+        /*
             $authors =array("Bertrand Guillaume","Thomas Heyd");
             $titre ="The Natural contract in the Anthropocene.";
             $url="#";
@@ -104,7 +152,7 @@ and open the template in the editor.
                 echo("</div>\n");
             }
             form_affiche_div($authors,$titre,$url,$in,$volumes,$pages,$publisher,$year);
-            form_affiche_div($authors,$titre,$url,$in,$volumes,$pages,$publisher,$year);
+            form_affiche_div($authors,$titre,$url,$in,$volumes,$pages,$publisher,$year);*/
         ?>
             
             

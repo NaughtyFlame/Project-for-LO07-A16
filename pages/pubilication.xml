@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <pubilication>
+		<titre></titre>
+		<auteurlist>
+			<auteur></auteur>
+		</auteurlist>
+		<in></in>
+		<volume></volume>
+		<numero></numero>
+		<page></page>
+		<editeur></editeur>
+		<annee></annee>
+		<url></url>
+		<referencelist>
+			<reference></reference>
+		</referencelist>
+		<affiliationlist>
+			<affiliation></affiliation>
+		</affiliationlist>
+	</pubilication>
+-->
+
+
+<icdstore>
+	<pubilication no="1">
+		<titre>Work-troop scheduling for road network accessibility after a earthquake</titre>
+		<auteurlist>
+			<auteur>Celso Satoshi Sakuraba</auteur>
+			<auteur>Andrea Cynithia Santos</auteur>
+			<auteur>Christian Prins</auteur>
+		</auteurlist>
+		<in>Electronic Notes in Discrete Mathematics</in>
+		<volume>52</volume>
+		<page>317–324</page>
+		<annee>2016</annee>
+		<referencelist>
+			<reference>DBLP</reference>
+		</referencelist>
+		<affiliationlist>
+			<affiliation>LOSI</affiliation>
+		</affiliationlist>
+	</pubilication>
+	
+	<pubilication no="2">
+		<titre>What does really matter in technology adoption and use? A CCO approach</titre>
+		<auteurlist>
+			<auteur>Thomas Martine</auteur>
+			<auteur>François Cooren</auteur>
+			<auteur>Aurélien Bénel</auteur>
+			<auteur> Manuel Zacklad</auteur>
+		</auteurlist>
+		<in>Management Communication Quarterly</in>
+		<volume>30</volume>
+		<numero>2</numero>
+		<page>164–187</page>
+		<editeur>Sage</editeur>
+		<annee>2016</annee>
+		<url>http:/dx.doi.org/10.1177/0893318915619012</url>
+		<referencelist>
+			<reference>ISI</reference>
+			<reference>SCOPUS</reference>
+			<reference>AERES-SHS</reference>
+		</referencelist>
+		<affiliationlist>
+			<affiliation>TECH-CICO</affiliation>
+			<affiliation>Résilience et gestion de crise</affiliation>
+		</affiliationlist>
+	</pubilication>
+	
+	<pubilication no="3">
+		<titre>Vector beam generation via micrometer-scale photonic integrated circuits</titre>
+		<auteurlist>
+			<auteur>Y-Z. Sun</auteur>
+			<auteur>R. Bachelot</auteur>
+			<auteur>S. Blaize</auteur>
+			<auteur>Z-Y Li</auteur>
+			<auteur>W. Ding</auteur>
+		</auteurlist>
+		<in>Journal of the Optical Society of America B</in>
+		<volume>33</volume>
+		<numero>3</numero>
+		<page>360–366</page>
+		<editeur>OSA</editeur>
+		<annee>2016</annee>
+		<referencelist>
+			<reference>ISI</reference>
+			<reference>SCOPUS</reference>
+		</referencelist>
+		<affiliationlist>
+			<affiliation>LNIO</affiliation>
+		</affiliationlist>
+	</pubilication>
+	
+</icdstore>

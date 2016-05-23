@@ -15,7 +15,7 @@ CREATE TABLE auteur
 	no_ss int NOT NULL PRIMARY KEY,
 	nom VARCHAR(64) NOT NULL,
 	prenom VARCHAR(64),
-        groupe VARCHAR(255) 
+		groupe VARCHAR(255) 
 );
 
 CREATE TABLE ecrire
@@ -25,7 +25,7 @@ CREATE TABLE ecrire
 	CONSTRAINT pk_ecrire PRIMARY KEY(id_p,id_auteur)
 );
 
-CREATE TABLE affiliation
+CREATE TABLE affication
 (
 	no_aff int NOT NULL PRIMARY KEY,
 	nom VARCHAR(255) NOT NULL
