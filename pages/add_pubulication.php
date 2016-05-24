@@ -63,56 +63,89 @@ and open the template in the editor.
             
             
         <?php
-            function form_input_text($label,$name,$holder){
-                echo("<div id='typein' class='row'>\n");
-                echo("<div class='col-md-2 col-md-push-1'>\n");
-                echo("<label>$label</label>\n");
-                echo("</div>\n");
-                echo("<div class='col-md-6 col-md-push-1'>\n");
-                echo("<input type='text' name='$name' placeholder='$holder' class='form-control'>\n");
-                echo("</div>\n");
-                echo("</div>");
+            if(isset($_GET['titre'])){
+                action();
+            }  else {
+                form();
             }
-            echo("<form method='get' action='#'>\n");
-            echo("<div class='row row-input'>");
-                echo("<div class='col-md-6'>");
-                /*echo("<div id='typein' class='row'>\n");
-                echo("<div class='col-md-6 col-md-push-1'>\n");
+            function action(){
+                $xml=  simplexml_load_file('pubilication.xml');
+                $add=$xml->addChild("pubilication");
+                $add_auteur=$add->addChild('auteurlist');
+                add_to_xml($add_auteur, 'auteur1','auteur');
+                add_to_xml($add_auteur, 'auteur2','auteur');
+                add_to_xml($add_auteur, 'auteur3','auteur');
+                add_to_xml($add_auteur, 'auteur4','auteur');
+                add_to_xml($add_auteur, 'auteur5','auteur');
+                add_to_xml($add,'titre','titre');
+                add_to_xml($add,'in','in');
+                add_to_xml($add,'volume','volume');
+                add_to_xml($add,'page','page');
+                add_to_xml($add,'editeur','editeur');
+                add_to_xml($add,'url','url');
+                add_to_xml($add,'annee','annee');
+                $xml->asXML('pubilication.xml');
+            }
+        
+            function add_to_xml($add,$name,$tag){
+                if(isset($_GET[$name])){
+                    if($_GET[$name]!=''){
+                        $add->addChild($tag,$_GET[$name]);
+                    }                
+                }
+            }
+            function form(){
+                function form_input_text($label,$name,$holder){
+                    echo("<div id='typein' class='row'>\n");
+                    echo("<div class='col-md-2 col-md-push-1'>\n");
+                    echo("<label>$label</label>\n");
+                    echo("</div>\n");
+                    echo("<div class='col-md-6 col-md-push-1'>\n");
+                    echo("<input type='text' name='$name' placeholder='$holder' class='form-control'>\n");
+                    echo("</div>\n");
+                    echo("</div>");
+                }
+                echo("<form method='get' action='add_pubulication.php'>\n");
+                echo("<div class='row row-input'>");
+                    echo("<div class='col-md-6'>");
+                    /*echo("<div id='typein' class='row'>\n");
+                    echo("<div class='col-md-6 col-md-push-1'>\n");
 
-                 echo("</div>\n");
-                 echo("</div>\n");*/
-                form_input_text('titre','titre','titre');
-                form_input_text('in', 'in', 'in');
-                form_input_text('Volume','volume' ,'Volume' );
-                form_input_text('Pages','pages','Pages' );
-                form_input_text('Publisher','publisher' ,'Publisher' );
-                form_input_text('url','url' ,'url' );
-                form_input_text('Year','year' ,'Year' );
-                echo("</div>");
-                echo("<div class='col-md-6'>");
-                echo("<label>nombre d'auteur</label>\n");
-                echo("<select id='select-auteur'>");
-                echo("<option id='auteur0' value='0'  selected>0</option>");
-                echo("<option id='auteur1' value='1' >1</option>");            
-                echo("<option id='auteur2' value='2' >2</option>");
-                echo("<option id='auteur3' value='3'>3</option>");
-                echo("<option id='auteur4' value='4'>4</option>");
-                echo("<option id='auteur5' value='5'>5</option>");
-                echo("</select><br>");
-                    echo("<div id='input-auteur'>");
-                    
+                     echo("</div>\n");
+                     echo("</div>\n");*/
+                    form_input_text('titre','titre','titre');
+                    form_input_text('in', 'in', 'in');
+                    form_input_text('Volume','volume' ,'Volume' );
+                    form_input_text('Pages','page','Pages' );
+                    form_input_text('editeur','editeur' ,'editeur' );
+                    form_input_text('url','url' ,'url' );
+                    form_input_text('Year','annee' ,'Year' );
+                    echo("</div>");
+                    echo("<div class='col-md-6'>");
+                    echo("<label>nombre d'auteur</label>\n");
+                    echo("<select id='select-auteur'>");
+                    echo("<option id='auteur0' value='0'  selected>0</option>");
+                    echo("<option id='auteur1' value='1' >1</option>");            
+                    echo("<option id='auteur2' value='2' >2</option>");
+                    echo("<option id='auteur3' value='3'>3</option>");
+                    echo("<option id='auteur4' value='4'>4</option>");
+                    echo("<option id='auteur5' value='5'>5</option>");
+                    echo("</select><br>");
+                        echo("<div id='input-auteur'>");
+
+                        echo("</div>");
                     echo("</div>");
                 echo("</div>");
-            echo("</div>");
-            printf("<div class='row demo-row'>"
-                    ."<div class='col-md-2 col-md-push-4'>"
-                    . "<input type='submit' class='btn btn-block btn-lg btn-inverse' id='btn' Value='submit'>"
-                    . "</div>"
-                    ."<div class='col-md-2 col-md-push-4'>"
-                    . "<input type='reset' class='btn btn-block btn-lg btn-inverse' id='btn' Value='reset'>"
-                    . "</div>"
-                    . "</div>");
-            echo("</form>\n");
+                printf("<div class='row demo-row'>"
+                        ."<div class='col-md-2 col-md-push-4'>"
+                        . "<input type='submit' class='btn btn-block btn-lg btn-inverse' id='btn' Value='submit'>"
+                        . "</div>"
+                        ."<div class='col-md-2 col-md-push-4'>"
+                        . "<input type='reset' class='btn btn-block btn-lg btn-inverse' id='btn' Value='reset'>"
+                        . "</div>"
+                        . "</div>");
+                echo("</form>\n");
+            }
         ?>
         <script src="../js/jquery-1.12.3.min.js" type="text/javascript"></script>
         <script src="../dist/js/flat-ui.min.js" type="text/javascript"></script>

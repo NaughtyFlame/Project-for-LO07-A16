@@ -13,6 +13,7 @@ var main = function() {
         var lastName = $('#last').val();
         var email = $('#email').val();
         var password = $('#password').val();
+        var check_utt =email.split['@'];
         if(username===""){
             $('.username-error').text("Please enter your username");
             check=0;
@@ -40,6 +41,13 @@ var main = function() {
           }else{
               $('.email-error').text("");
           }
+          /*if(check_utt[1]!=='utt.fr'){
+              $('.email-error').text("You have to use an utt email adresse");
+              check=0;
+          }else
+          {
+              $('.email-error').text("");
+          }*/
         if(password ===""){
             $('.password-error').text("Please enter your password");
             check=0;
@@ -52,7 +60,7 @@ var main = function() {
           }else{
               $('.password-error').text("");
           }
-          if(check==0){
+          if(check===0){
               return false;
           }
           });
