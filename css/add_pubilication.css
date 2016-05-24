@@ -37,3 +37,8 @@ and open the template in the editor.
 #typein input{
     width: 250px;
 }
+
+.row-input{
+    min-height:700px;
+}
+
