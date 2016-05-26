@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 CREATE TABLE pubilication
 (
 	no_p int NOT NULL PRIMARY KEY,
@@ -48,6 +49,8 @@ CREATE TABLE utlisation
     lastname VARCHAR(64) NOT NULL
 );
 =======
+=======
+>>>>>>> origin/master
 CREATE TABLE publication
 (
 	id_p int NOT NULL PRIMARY KEY,
@@ -101,5 +104,9 @@ create table organisation
     nom_org varchar(64),
     id_ch int,
     foreign key (id_ch) references chercheur (id_ch)
+<<<<<<< HEAD
 )
 >>>>>>> b226ee42bc26c5a1162aa29ed66535b57b2a4095
+=======
+)
+>>>>>>> origin/master
