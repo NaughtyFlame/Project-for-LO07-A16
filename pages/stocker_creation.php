@@ -8,6 +8,7 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <?php
@@ -23,7 +24,8 @@ and open the template in the editor.
                 . "VALUES('$username','$password','$email','$firstname','$lastname')";
         $result=  mysqli_query($database, $requete);
         if($result){
-            echo"bienvenu";
+            header("../index.html");
+            echo("<a class='btn btn-default' href='../index.html'>Back to Home Page</a>");
         }else{
             echo("sorry, are u kidding me?\n");
             echo(mysqli_errno($database));
