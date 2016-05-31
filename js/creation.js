@@ -40,6 +40,7 @@ var main = function() {
           }else{
               $('.email-error').text("");
           }
+          /* il faut confirmer que l'adresse est à l'UTT */
         if(password ===""){
             $('.password-error').text("Please enter your password");
             check=0;
