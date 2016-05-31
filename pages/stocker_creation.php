@@ -14,14 +14,14 @@ and open the template in the editor.
         <?php
         require_once("../sql/link_to_myadmin.php");
         
-        $username=$_POST['username'];
+        $organisation=$_POST['organisation'];
         $password=md5($_POST['password']);
         $firstname=$_POST['firstname'];
         $lastname=$_POST['lastname'];
         $email=$_POST['email'];
         
-        $requete="INSERT INTO utilisation (username,pass,email,firstname,lastname)"
-                . "VALUES('$username','$password','$email','$firstname','$lastname')";
+        $requete="INSERT INTO utilisation (organisation,pass,email,firstname,lastname)"
+                . "VALUES('$organisation','$password','$email','$firstname','$lastname')";
         $result=  mysqli_query($database, $requete);
         if($result){
             header("../index.html");

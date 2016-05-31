@@ -8,7 +8,6 @@ CREATE TABLE pubilication
 	annee YEAR,
 	/*url VARCHAR(255),*/
         lieu_confer VARCHAR(255),
-        status VARCHAR(255),
         categorie VARCHAR(255)
 );
 

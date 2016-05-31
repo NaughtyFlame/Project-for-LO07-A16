@@ -32,7 +32,7 @@ and open the template in the editor.
                         <ul class="dropdown-menu">
                             <li><a href="add_pubulication.php">add</a></li>
                           <li><a href="#">delete</a></li>
-                          <li><a href="#">Something else here</a></li>
+                          <li><a href="#">modifier</a></li>
                           <li class="divider"></li>
                           <li><a href="#">Separated link</a></li>
                         </ul>

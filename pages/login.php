@@ -16,9 +16,9 @@ and open the template in the editor.
             if(!isset($_POST['submit'])){  
                 exit('fail!');  
             } 
-            $username =$_POST['username'];
+            $email =$_POST['email'];
             $password = md5($_POST['password']);
-            $requete = "select username,pass,firstname from utilisation where username='$username'"
+            $requete = "select email,pass,firstname from utilisation where email='$email'"
                     . " and pass='$password' limit 1";
             $result=  mysqli_query($database, $requete);
             $row=  mysqli_num_rows($result);
@@ -27,7 +27,7 @@ and open the template in the editor.
                 session_start();
                 $_SESSION['firstname']= $ligne[2];
                 $_SESSION['password']=$ligne[1];
-                $_SESSION['username']=$ligne[0];
+                $_SESSION['eamil']=$ligne[0];
                 echo ("bonjour");
                 header("location:search.php");
             }

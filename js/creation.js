@@ -8,14 +8,14 @@
 var main = function() {
         $('form').submit(function(){
         var check=1;
-        var username = $('#username').val();
+        var organisation = $('#organisation').val();
         var firstName = $('#first').val();
         var lastName = $('#last').val();
         var email = $('#email').val();
         var password = $('#password').val();
         var checkutt=email.split("@")
-        if(username===""){
-            $('.username-error').text("Please enter your username");
+        if(organisation===""){
+            $('.organisation-error').text("Please enter your name of organisation");
             check=0;
         }else
         {
