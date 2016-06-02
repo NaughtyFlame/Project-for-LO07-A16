@@ -42,3 +42,7 @@ and open the template in the editor.
     min-height:700px;
 }
 
+select,select:active{
+    height: 30px;
+    border-radius: 5px;
+}

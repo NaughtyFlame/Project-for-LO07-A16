@@ -60,7 +60,23 @@ and open the template in the editor.
                 </nav><!-- /navbar -->
               </div>
             </div> <!-- /row -->      
-            
+            <div class="btn-group">
+            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Tire par categorie <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">All</a></li>              
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Article dans des Revues Internationales(RI)</a></li>
+              <li><a href="#">Article dans des Conférences Internationales(CI)</a></li>
+              <li><a href="#">Article dans des Revues Françaises(RF)</a></li>              
+              <li><a href="#">Article dans des Conférences Françaises(CF)</a></li>
+              <li><a href="#">Ouvrages Scientifiques</a></li>
+              <li><a href="#">Thèse de Doctorat</a></li>
+              <li><a href="#">Brevet</a></li>
+              <li><a href="#">Autre Production</a></li>
+            </ul>
+          </div>
             <h4 class="pageheader">Peer-reviewed journal articles indexed in international databases</h4>
             <p id="demo"></p>
             <p id="test"></p>
@@ -94,7 +110,7 @@ and open the template in the editor.
                             "<a href='#'>"+x[i].getElementsByTagName("titre")[0].childNodes[0].nodeValue+"</a></div>"+         
                             "<div class='row'><p>"+x[i].getElementsByTagName("in")[0].childNodes[0].nodeValue+" "+
                             "<span>"+x[i].getElementsByTagName("volume")[0].childNodes[0].nodeValue;
-                            
+                    
                             if(x[i].getElementsByTagName("numero").length>0){
                                 div+="("+x[i].getElementsByTagName("numero")[0].childNodes[0].nodeValue+")";
                             }

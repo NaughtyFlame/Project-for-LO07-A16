@@ -63,6 +63,7 @@ and open the template in the editor.
             
             
         <?php
+            session_start();  
             if(isset($_GET['titre'])){
                 action();
             }  else {
@@ -84,7 +85,41 @@ and open the template in the editor.
                 add_to_xml($add,'editeur','editeur');
                 add_to_xml($add,'url','url');
                 add_to_xml($add,'annee','annee');
+                if(isset($_GET['categorie'])){
+                    switch ($_GET['categorie']){
+                        case 1:$attrib=$add->addChild('categorie', 'Article dans des Revues Internationales(RI)');
+                                $attrib->addAttribute('nocategorie', '1');
+                                                        break;
+                        case 2:$attrib=$add->addChild('categorie', 'Article dans des Conférences Internationales(CI)');
+                                $attrib->addAttribute('nocategorie', '2');
+                                                        break;
+                        case 3:$attrib=$add->addChild('categorie', 'Article dans des Revues Françaises(RF)');
+                                $attrib->addAttribute('nocategorie', '3');
+                                                        break;
+                        case 4:$attrib=$add->addChild('categorie', 'Article dans des Conférences Françaises(CF)');
+                               $attrib->addAttribute('nocategorie', '4');
+                                                        break;
+                        case 5:$attrib=$add->addChild('categorie', 'Ouvrages Scientifiques');
+                                $attrib->addAttribute('nocategorie', '5');
+                                                        break;
+                        case 6:$attrib=$attrib=$add->addChild('categorie', 'Thèse de Doctorat');
+                                $attrib->addAttribute('nocategorie', '6');
+                                                        break;
+                        case 7:$attrib=$add->addChild('categorie', 'Brevet');
+                                $attrib->addAttribute('nocategorie', '7');
+                                                        break;
+                        case 8:$attrib=$add->addChild('categorie', 'Autre Production');
+                                $attrib->addAttribute('nocategorie', '8');
+                                                        break;
+                                      
+                        
+                    }
+                }
+                if(isset($_SESSION['email'])){
+                    $add->addChild('upload',$_SESSION['email']);
+                }
                 $xml->asXML('pubilication.xml');
+                header("location:search.php");
             }
         
             function add_to_xml($add,$name,$tag){
@@ -120,6 +155,26 @@ and open the template in the editor.
                     form_input_text('editeur','editeur' ,'editeur' );
                     form_input_text('url','url' ,'url' );
                     form_input_text('Year','annee' ,'Year' );
+                    
+                    //catagorie
+                    echo("<div id='typein' class='row'>\n");
+                    echo("<div class='col-md-2 col-md-push-1'>\n");
+                    echo("<label for='categorie'>categorie</label>");
+                    echo("</div>\n");                    
+                    echo("<div class='col-md-6 col-md-push-1'>\n");
+                    echo("<select name='categorie'>");
+                    echo("<option value='1'>Article dans des Revues Internationales(RI)</option>");
+                    echo("<option value='2'>Article dans des Conférences Internationales(CI)</option>");
+                    echo("<option value='3'>Article dans des Revues Françaises(RF)</option>");
+                    echo("<option value='4'>Article dans des Conférences Françaises(CF)</option>");                    
+                    echo("<option value='5'>Ouvrages Scientifiques</option>");
+                    echo("<option value='6'>Thèse de Doctorat</option>");
+                    echo("<option value='7'>Brevet</option>");
+                    echo("<option value='8'>Autre Production</option>");
+                    echo("</select>");
+                    echo("</div>\n");
+                    echo("</div>");
+                    
                     echo("</div>");
                     echo("<div class='col-md-6'>");
                     echo("<label>nombre d'auteur</label>\n");

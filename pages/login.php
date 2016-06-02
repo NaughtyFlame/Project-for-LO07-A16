@@ -27,8 +27,7 @@ and open the template in the editor.
                 session_start();
                 $_SESSION['firstname']= $ligne[2];
                 $_SESSION['password']=$ligne[1];
-                $_SESSION['eamil']=$ligne[0];
-                echo ("bonjour");
+                $_SESSION['email']=$ligne[0];
                 header("location:search.php");
             }
             else{
