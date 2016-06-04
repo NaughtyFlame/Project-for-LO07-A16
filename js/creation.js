@@ -41,6 +41,7 @@ var main = function() {
           }else{
               $('.email-error').text("");
           }
+<<<<<<< HEAD
           if(checkutt[1]!='utt.fr'){
               $('.email-error').text("You have to use an utt email adresse");
               check=0;
@@ -48,6 +49,9 @@ var main = function() {
           {
               $('.email-error').text("");
           }
+=======
+          /* il faut confirmer que l'adresse est à l'UTT */
+>>>>>>> origin/master
         if(password ===""){
             $('.password-error').text("Please enter your password");
             check=0;
