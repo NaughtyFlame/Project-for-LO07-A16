@@ -20,7 +20,7 @@
 	</pubilication>
 -->
 <icdstore>
-	<pubilication no="1">
+	<pubilication id="mengjie.shi@utt.fr:146499123563">
 		<titre>Work-troop scheduling for road network accessibility after a earthquake</titre>
 		<auteurlist>
 			<auteur>Celso Satoshi Sakuraba</auteur>
@@ -37,9 +37,12 @@
 		<affiliationlist>
 			<affiliation>LOSI</affiliation>
 		</affiliationlist>
+		<categorie nocategorie="1">Article dans des Revues Internationales(RI)</categorie>
+		<editeur>mengjie.shi@utt.fr</editeur>
+		
 	</pubilication>
 	
-	<pubilication no="2">
+	<pubilication id="mengjie.shi@utt.fr:146499132763">
 		<titre>What does really matter in technology adoption and use? A CCO approach</titre>
 		<auteurlist>
 			<auteur>Thomas Martine</auteur>
@@ -63,9 +66,11 @@
 			<affiliation>TECH-CICO</affiliation>
 			<affiliation>Résilience et gestion de crise</affiliation>
 		</affiliationlist>
+		<categorie nocategorie="2">Article dans des Conférences Internationales(CI)</categorie>
+		<editeur>mengjie.shi@utt.fr</editeur>
 	</pubilication>
 	
-	<pubilication no="3">
+	<pubilication id="mengjie.shi@utt.fr:99123132763">
 		<titre>Vector beam generation via micrometer-scale photonic integrated circuits</titre>
 		<auteurlist>
 			<auteur>Y-Z. Sun</auteur>
@@ -87,5 +92,49 @@
 		<affiliationlist>
 			<affiliation>LNIO</affiliation>
 		</affiliationlist>
+		<categorie nocategorie="3">Article dans des Revues Françaises(RF)</categorie>
+		<editeur>mengjie.shi@utt.fr</editeur>
 	</pubilication>
-	<pubilication><auteurlist><auteur>admin</auteur></auteurlist><titre>test session</titre><in>test filie</in><volume>15</volume><page>123</page><editeur>admin</editeur><url>#</url><annee>2016</annee><upload>mengjie.shi@utt.fr</upload></pubilication><pubilication><auteurlist><auteur>admin</auteur></auteurlist><titre>test categorie</titre><in>test file</in><volume>123</volume><page>123</page><editeur>admin</editeur><url>#</url><annee>2016</annee><categorie>Ouvrages Scientifiques</categorie><upload>mengjie.shi@utt.fr</upload></pubilication><pubilication><auteurlist><auteur>admin</auteur></auteurlist><titre>test attribute</titre><in>test file</in><volume>132</volume><page>132</page><editeur>admin</editeur><url>#</url><annee>2016</annee><categorie nocategorie="2">Article dans des Conférences Internationales(CI)</categorie><upload>mengjie.shi@utt.fr</upload></pubilication></icdstore>
+	
+	<pubilication id="mengjie.shi@utt.fr:146499123132763">
+	<auteurlist>
+		<auteur>Yongwen Liu</auteur>
+		<auteur>Moez Esseghir</auteur>
+		<auteur> Leila Merghem-Boulahia</auteur>
+	</auteurlist>
+	<titre>valuation of parameters importance in cloud service selection using rough sets</titre>
+	<in>Applied Mathemathics (AM) journal</in>
+	<volume>7</volume>
+	<page>6</page>
+	<editeur>Scientific Research Publishing</editeur>
+	<url>#</url>
+	<annee>2016</annee>
+	<categorie nocategorie="4">Article dans des Conférences Françaises(CF)</categorie>
+	<upload>mengjie.shi@utt.fr</upload>
+	</pubilication>
+	
+	<pubilication id="shi@utt.fr:1464145992763">
+	<auteurlist>
+		<auteur>Chongpu Zhai</auteur>
+		<auteur>Yixiang Gan</auteur>
+		<auteur>Dorian Hanaor</auteur>
+		<auteur>Gwénaëlle Proust</auteur>
+		<auteur>Delphine Retraint</auteur>
+	</auteurlist>
+	<titre>The Role of Surface Structure in Normal Contact Stiffness</titre>
+	<in>Experimental Mechanics</in>
+	<volume>56</volume>
+	<page>359-368</page>
+	<editeur>Springer US</editeur>
+	<url>http://link.springer.com/article/10.1007%2Fs11340-015-0107-0</url>
+	<annee>2016</annee>
+	<categorie nocategorie="5">Ouvrages Scientifiques</categorie>
+	<upload>shi@utt.fr</upload>
+	</pubilication>
+	
+	
+	
+	
+	
+	
+<pubilication id="shi@utt.fr:1464992763"><auteurlist><auteur>admin</auteur></auteurlist><titre>h5tr</titre><in>SHANGHAI</in><volume>494</volume><page>6</page><editeur>Scientific Research Publishing</editeur><url>somethingphp</url><annee>1994</annee><categorie nocategorie="8">Autre Production</categorie><upload>shi@utt.fr</upload></pubilication></icdstore>

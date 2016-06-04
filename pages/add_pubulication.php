@@ -25,14 +25,14 @@ and open the template in the editor.
                   </div>
                   <div class="collapse navbar-collapse" id="navbar-collapse-01">
                     <ul class="nav navbar-nav navbar-left">
-                      <li><a href="#fakelink">Logout<span class="navbar-unread">1</span></a></li>
+                      <li><a href="logout.php">Logout<span class="navbar-unread">1</span></a></li>
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Action <b class="caret"></b></a>
                         <span class="dropdown-arrow"></span>
                         <ul class="dropdown-menu">
-                          <li><a href="#">add</a></li>
+                            <li><a href="add_pubulication.php">add</a></li>
                           <li><a href="#">delete</a></li>
-                          <li><a href="#">Something else here</a></li>
+                          <li><a href="modifier.php">Something else here</a></li>
                           <li class="divider"></li>
                           <li><a href="#">Separated link</a></li>
                         </ul>
@@ -72,6 +72,8 @@ and open the template in the editor.
             function action(){
                 $xml=  simplexml_load_file('pubilication.xml');
                 $add=$xml->addChild("pubilication");
+                $id=$_SESSION['email'].':'.time();
+                $add->addAttribute('id',$id);
                 $add_auteur=$add->addChild('auteurlist');
                 add_to_xml($add_auteur, 'auteur1','auteur');
                 add_to_xml($add_auteur, 'auteur2','auteur');
