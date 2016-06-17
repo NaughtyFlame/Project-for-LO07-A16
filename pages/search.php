@@ -21,18 +21,18 @@ and open the template in the editor.
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
                       <span class="sr-only">Toggle navigation</span>
                     </button>
-                      <a class="navbar-brand" href="search.php">ICD</a>
+                    <a class="navbar-brand" href="#">ICD</a>
                   </div>
                   <div class="collapse navbar-collapse" id="navbar-collapse-01">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a href="logout.php">Logout<span class="navbar-unread">1</span></a></li>
+                      <li><a href="#fakelink">Logout<span class="navbar-unread">1</span></a></li>
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Action <b class="caret"></b></a>
                         <span class="dropdown-arrow"></span>
                         <ul class="dropdown-menu">
                             <li><a href="add_pubulication.php">add</a></li>
                           <li><a href="#">delete</a></li>
-                          <li><a href="modifier.php">modifier</a></li>
+                          <li><a href="#">modifier</a></li>
                           <li class="divider"></li>
                           <li><a href="#">Separated link</a></li>
                         </ul>
@@ -65,23 +65,21 @@ and open the template in the editor.
               Tire par categorie <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-              <li><a href="search.php">All</a></li>              
+              <li><a href="#">All</a></li>              
               <li role="separator" class="divider"></li>
-              <li><a href="search.php?categorie=1">Article dans des Revues Internationales(RI)</a></li>
-              <li><a href="search.php?categorie=2">Article dans des Conférences Internationales(CI)</a></li>
-              <li><a href="search.php?categorie=3">Article dans des Revues Françaises(RF)</a></li>              
-              <li><a href="search.php?categorie=4">Article dans des Conférences Françaises(CF)</a></li>
-              <li><a href="search.php?categorie=5">Ouvrages Scientifiques</a></li>
-              <li><a href="search.php?categorie=6">Thèse de Doctorat</a></li>
-              <li><a href="search.php?categorie=7">Brevet</a></li>
-              <li><a href="search.php?categorie=8">Autre Production</a></li>
+              <li><a href="#">Article dans des Revues Internationales(RI)</a></li>
+              <li><a href="#">Article dans des Conférences Internationales(CI)</a></li>
+              <li><a href="#">Article dans des Revues Françaises(RF)</a></li>              
+              <li><a href="#">Article dans des Conférences Françaises(CF)</a></li>
+              <li><a href="#">Ouvrages Scientifiques</a></li>
+              <li><a href="#">Thèse de Doctorat</a></li>
+              <li><a href="#">Brevet</a></li>
+              <li><a href="#">Autre Production</a></li>
             </ul>
           </div>
-            
+            <h4 class="pageheader">Peer-reviewed journal articles indexed in international databases</h4>
             <p id="demo"></p>
             <p id="test"></p>
-            <!--  traiter xml en utilisant js
-            
             <script>
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
@@ -91,6 +89,7 @@ and open the template in the editor.
             };
             xhttp.open("POST", "pubilication.xml", true);
             xhttp.send();
+
             function affiche(xml) {
                 var x, i, xmlDoc, div;
                 xmlDoc = xml.responseXML;
@@ -128,83 +127,27 @@ and open the template in the editor.
                 document.getElementById("demo").innerHTML = div;
             }
             </script>
-            -->
+
         
         <?php
-        // traiter xml en utilisant simplexml
-        if(isset($_GET['categorie'])){
-            affiche_attrib('categorie', $_GET['categorie']);
-        }else
-        {
-            echo("<h4 class='pageheader'>Peer-reviewed journal articles indexed in international databases</h4>");
-            affiche_all();
-        }
-        function affiche_attrib($attrib_num,$attrib_val){
-            $xml=  simplexml_load_file('pubilication.xml');
-            printf("<h4 class='pageheader'>%s</h4>",$xml->pubilication->$attrib_num);
-                foreach ($xml->pubilication as $pub ){
-                $categorie=$pub->$attrib_num->attributes();
-                if($categorie==$attrib_val)
-                    {
-                        
-                        $list_auteur='';
-                        $url=$pub->url;
-                        $titre=$pub->titre;
-                        $in=$pub->in;
-                        $volumes=$pub->volume;
-                        $numero=$pub->numero;
-                        $pages=$pub->page;
-                        $editeur=$pub->editeur;
-                        $year=$pub->annee;
-                        foreach ($pub->auteurlist->auteur as $auteur) {
-                            $list_auteur=$list_auteur . $auteur.",";
-                        }
-                        echo("<div class='valuesbox'>\n");
-                        echo("<div class='row'>");
-                        echo("<p>$list_auteur</p>");
-                        echo("</div>\n");
-
-                        echo("<div class='row'>");
-                        echo("<a href='$url'>$titre</a>\n");
-                        echo("</div>\n");
-
-                        echo("<div class='row'>");
-                        echo("<p>$in,<span>$volumes($numero)</span>,$pages</p>\n");
-                        echo("</div>\n");
-
-                        echo("<div class='row'>");
-                        echo("<p>$editeur,$year</p>");
-                        echo("</div>\n");
-
-                        echo("<div class='row'>");
-                        echo("</div>\n");
-
-                        echo("</div>\n");
-
-                }
-            }
-            
-            
-        }
-        
-        function affiche_all(){
-                $xml=simplexml_load_file('pubilication.xml');
-                foreach ($xml->pubilication as $pub ){
-                $list_auteur='';
-                $url=$pub->url;
-                $titre=$pub->titre;
-                $in=$pub->in;
-                $volumes=$pub->volume;
-                $numero=$pub->numero;
-                $pages=$pub->page;
-                $editeur=$pub->editeur;
-                $year=$pub->annee;
-                foreach ($pub->auteurlist->auteur as $auteur) {
-                    $list_auteur=$list_auteur . $auteur.",";
-                }
+        /*
+            $authors =array("Bertrand Guillaume","Thomas Heyd");
+            $titre ="The Natural contract in the Anthropocene.";
+            $url="#";
+            $in="Environmental Ethics";
+            $volumes="38(4)";
+            $pages="xx–xx";
+            $publisher="Center for Environmental Philosophy";
+            $year="2016";
+            function form_affiche_div($authors,$titre,$url,$in,$volumes,$pages,$publisher,$year){
+                $liste_authors="";
                 echo("<div class='valuesbox'>\n");
+                
+                foreach ($authors as $values){
+                    $liste_authors=$liste_authors.$values.',';
+                }
                 echo("<div class='row'>");
-                echo("<p>$list_auteur</p>");
+                echo("<p>$liste_authors</p>");
                 echo("</div>\n");
                 
                 echo("<div class='row'>");
@@ -212,11 +155,11 @@ and open the template in the editor.
                 echo("</div>\n");
                 
                 echo("<div class='row'>");
-                echo("<p>$in,<span>$volumes($numero)</span>,$pages</p>\n");
+                echo("<p>$in,<span>$volumes</span>,$pages</p>\n");
                 echo("</div>\n");
                 
                 echo("<div class='row'>");
-                echo("<p>$editeur,$year</p>");
+                echo("<p>$publisher,$year");
                 echo("</div>\n");
                 
                 echo("<div class='row'>");
@@ -224,12 +167,8 @@ and open the template in the editor.
                 
                 echo("</div>\n");
             }
-        }
-        
-        
-        
-        
-       
+            form_affiche_div($authors,$titre,$url,$in,$volumes,$pages,$publisher,$year);
+            form_affiche_div($authors,$titre,$url,$in,$volumes,$pages,$publisher,$year);*/
         ?>
             
             
